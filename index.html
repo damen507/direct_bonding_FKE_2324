@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Spoiler Example</title>
+    <style>
+        .spoiler {
+            background-color: #f0f0f0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            cursor: pointer;
+        }
+        .spoiler-content {
+            display: none;
+        }
+    </style>
+    <script>
+        function revealSpoiler() {
+            var spoilerContent = document.getElementById("spoilerContent");
+            if (spoilerContent.style.display === "none") {
+                spoilerContent.style.display = "block";
+            } else {
+                spoilerContent.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>令人兴奋的剧透示例 (Exciting Spoiler Example)</h1>
+    <p>点击按钮以显示令人兴奋的结果！ (Click the button to reveal the exciting result!)</p>
+    <div class="spoiler" onclick="revealSpoiler()">点击以显示结果 (Click to reveal result)</div>
+    <div class="spoiler-content" id="spoilerContent">
+        <p>令人兴奋的结果是... 你是了不起的！ (The exciting result is... you're amazing!)</p>
+    </div>
+</body>
+</html>
