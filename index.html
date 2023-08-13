@@ -46,6 +46,46 @@
         .data { background-color: #9b59b6; }
         .program { background-color: #1abc9c; }
         .game { background-color: #f39c12; }
+
+        /* Congratulations Animation */
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-20px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .congratulations {
+            text-align: center;
+            font-size: 24px;
+            color: #f39c12;
+            margin-top: 20px;
+            animation: bounce 3s ease infinite;
+        }
+
+        /* Rainbow Text Animation */
+        @keyframes rainbow {
+            0% { color: red; }
+            14% { color: orange; }
+            28% { color: yellow; }
+            42% { color: green; }
+            57% { color: blue; }
+            71% { color: indigo; }
+            85% { color: violet; }
+            100% { color: red; }
+        }
+
+        .rainbow-text {
+            text-align: center;
+            font-size: 20px;
+            margin-top: 10px;
+            animation: rainbow 6s linear infinite;
+        }
     </style>
     <script>
         function revealPosition(positionId) {
@@ -59,8 +99,8 @@
     </script>
 </head>
 <body>
-    <h1>Position Candidates</h1>
-    <p style="text-align: center;">Click on a position to reveal the candidates:</p>
+    <h1>Direct Bonding筹备名单</h1>
+    <p style="text-align: center;">Click on a position to reveal the candidates: >_<</p>
     
     <div class="position principal" onclick="revealPosition('principalContent')">校长 (Principal)</div>
     <div class="position-content" id="principalContent">
@@ -131,6 +171,8 @@
             <li>Yu Wei</li>
         </ul>
     </div>
-    
+
+    <div class="congratulations">Congratulations to all candidates!</div>
+    <div class="rainbow-text">希望大家可以玩的开开心心 XDDDD</div>
 </body>
 </html>
