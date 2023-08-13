@@ -2,35 +2,135 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Spoiler Example</title>
+    <title>Candidate Positions</title>
     <style>
-        .spoiler {
-            background-color: #f0f0f0;
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .position {
+            color: #ffffff;
             padding: 10px;
             border: 1px solid #ccc;
             cursor: pointer;
+            margin: 10px auto;
+            width: 80%;
+            text-align: center;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
         }
-        .spoiler-content {
+        .position-content {
             display: none;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #ffffff;
+            margin: 0 auto;
+            width: 80%;
         }
+        ul {
+            padding-left: 20px;
+            margin: 0;
+        }
+        /* Different background colors for positions */
+        .principal { background-color: #3498db; }
+        .transport { background-color: #e74c3c; }
+        .food { background-color: #2ecc71; }
+        .tech { background-color: #e67e22; }
+        .data { background-color: #9b59b6; }
+        .program { background-color: #1abc9c; }
+        .game { background-color: #f39c12; }
     </style>
     <script>
-        function revealSpoiler() {
-            var spoilerContent = document.getElementById("spoilerContent");
-            if (spoilerContent.style.display === "none") {
-                spoilerContent.style.display = "block";
+        function revealPosition(positionId) {
+            var positionContent = document.getElementById(positionId);
+            if (positionContent.style.display === "none") {
+                positionContent.style.display = "block";
             } else {
-                spoilerContent.style.display = "none";
+                positionContent.style.display = "none";
             }
         }
     </script>
 </head>
 <body>
-    <h1>令人兴奋的剧透示例 (Exciting Spoiler Example)</h1>
-    <p>点击按钮以显示令人兴奋的结果！ (Click the button to reveal the exciting result!)</p>
-    <div class="spoiler" onclick="revealSpoiler()">点击以显示结果 (Click to reveal result)</div>
-    <div class="spoiler-content" id="spoilerContent">
-        <p>令人兴奋的结果是... 你是了不起的！ (The exciting result is... you're amazing!)</p>
+    <h1>Position Candidates</h1>
+    <p style="text-align: center;">Click on a position to reveal the candidates:</p>
+    
+    <div class="position principal" onclick="revealPosition('principalContent')">校长 (Principal)</div>
+    <div class="position-content" id="principalContent">
+        <ul>
+            <li>Kai En</li>
+        </ul>
     </div>
+    
+    <div class="position transport" onclick="revealPosition('transportContent')">交通部门 (Transport Department)</div>
+    <div class="position-content" id="transportContent">
+        <ul>
+            <li>Zhi Heng</li>
+        </ul>
+    </div>
+    
+    <div class="position food" onclick="revealPosition('foodContent')">美食部门 (Food Department)</div>
+    <div class="position-content" id="foodContent">
+        <ul>
+            <li>Wei Cun</li>
+            <li>Jing Wen</li>
+            <li>Jia Tian</li>
+        </ul>
+    </div>
+
+    <div class="position tech" onclick="revealPosition('techContent')">技术部门 (Technical Department)</div>
+    <div class="position-content" id="techContent">
+        <ul>
+            <li>Yu Wei</li>
+            <li>Hui Jing</li>
+        </ul>
+    </div>
+
+    <div class="position data" onclick="revealPosition('dataContent')">资料部门 (Data Department)</div>
+    <div class="position-content" id="dataContent">
+        <ul>
+            <li>Jing Wen</li>
+            <li>Zhi Hang</li>
+        </ul>
+    </div>
+
+    <div class="position program" onclick="revealPosition('programContent')">节目部门 (Program Department)</div>
+    <div class="position-content" id="programContent">
+        <ul>
+            <li>Zhi Hang</li>
+            <li>Wan Nee</li>
+            <li>Shi Ya</li>
+            <li>Hui Lyn</li>
+            <li>Nian Chi</li>
+            <li>Jia Hao</li>
+            <li>Yi Shan</li>
+            <li>Hui Jing</li>
+            <li>Yu Wei</li>
+        </ul>
+    </div>
+
+    <div class="position game" onclick="revealPosition('gameContent')">游戏部门 (Game Department)</div>
+    <div class="position-content" id="gameContent">
+        <ul>
+            <li>Wan Nee</li>
+            <li>Yun Xian</li>
+            <li>Shi Ya</li>
+            <li>Ru Yik</li>
+            <li>Hui Lyn</li>
+            <li>Nian Chi</li>
+            <li>Jia Hao</li>
+            <li>Yi Shan</li>
+            <li>Hui Jing</li>
+            <li>Yu Wei</li>
+        </ul>
+    </div>
+    
 </body>
 </html>
